@@ -1,4 +1,6 @@
-﻿using Ninject;
+﻿using DataAccess.Abstract;
+using Business.Abstract;
+using Ninject;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,6 +15,12 @@ namespace Business.DependencyResolvers.Ninject
         {
             var kernel = new StandardKernel(new BusinessModule());
             return kernel.Get<T>();
+        }
+
+        public static void RegisterServices()
+        {
+            GetInstance<IDifficultyDal>();
+            GetInstance<IDifficultyService>();
         }
     }
 }

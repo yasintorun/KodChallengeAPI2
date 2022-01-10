@@ -15,5 +15,7 @@ namespace DataAccess.Concrete
             optionsBuilder.UseSqlServer(@"Server=(localdb)\MSSQLLocalDB; Database=KodChallenge; Trusted_Connection=true");
         }
         public DbSet<User> Users { get; set; }
+        public DbSet<Difficulty> Difficulties { get; set; }
+
     }
 }
