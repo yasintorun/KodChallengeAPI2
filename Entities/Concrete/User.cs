@@ -9,7 +9,7 @@ namespace Entities.Concrete
 {
     public class User : BaseEntity
     {
-        public int UserId { get; set; }
+        public int Id { get; set; }
         public int Username { get; set; }
         public int Email { get; set; }
         public int Password { get; set; }

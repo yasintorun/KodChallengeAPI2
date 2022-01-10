@@ -18,6 +18,7 @@ namespace DataAccess.Concrete
         public DbSet<Difficulty> Difficulties { get; set; }
 
         public DbSet<Track> Tracks { get; set; }
+        public DbSet<Problem> Problems { get; set; }
 
     }
 }

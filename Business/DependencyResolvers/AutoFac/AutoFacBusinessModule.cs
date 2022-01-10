@@ -26,6 +26,14 @@ namespace Business.DependencyResolvers.AutoFac
             builder.RegisterType<EfTrackDal>().As<ITrackDal>().SingleInstance();
             builder.RegisterType<TrackManager>().As<ITrackService>().SingleInstance();
 
+            //problem
+            builder.RegisterType<EfProblemDal>().As<IProblemDal>().SingleInstance();
+            builder.RegisterType<ProblemManager>().As<IProblemService>().SingleInstance();
+
+            //user
+            builder.RegisterType<EfUserDal>().As<IUserDal>().SingleInstance();
+            builder.RegisterType<UserManager>().As<IUserService>().SingleInstance();
+
 
             /*var assembly = System.Reflection.Assembly.GetExecutingAssembly();
 
