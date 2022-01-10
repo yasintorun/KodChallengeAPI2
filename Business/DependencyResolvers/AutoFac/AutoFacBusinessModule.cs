@@ -18,9 +18,13 @@ namespace Business.DependencyResolvers.AutoFac
     {
         protected override void Load(ContainerBuilder builder)
         {
+            //difficulty
             builder.RegisterType<EfDifficultyDal>().As<IDifficultyDal>().SingleInstance();
             builder.RegisterType<DifficultyManager>().As<IDifficultyService>().SingleInstance();
 
+            //track
+            builder.RegisterType<EfTrackDal>().As<ITrackDal>().SingleInstance();
+            builder.RegisterType<TrackManager>().As<ITrackService>().SingleInstance();
 
 
             /*var assembly = System.Reflection.Assembly.GetExecutingAssembly();
