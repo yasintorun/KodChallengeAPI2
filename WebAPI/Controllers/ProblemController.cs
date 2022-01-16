@@ -1,6 +1,7 @@
 ﻿using Business.Abstract;
 using Core.Extensions;
 using Entities.Concrete;
+using Entities.DTOs;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -21,6 +22,18 @@ namespace WebAPI.Controllers
         public IActionResult GetAll()
         {
             return this.ResponseResult(_problemService.GetAll());
+        }
+        [HttpGet("getallbytrackid")]
+        public IActionResult GetAllByTrackId(int trackId)
+        {
+            return this.ResponseResult(_problemService.GetAllByTrackId(trackId));
+        }
+        
+
+       [HttpGet("getproblembyid")]
+        public IActionResult GetById(int id)
+        {
+            return this.ResponseResult(_problemService.Get(x=>x.Id==id));
         }
 
         [HttpPost("addproblems")]

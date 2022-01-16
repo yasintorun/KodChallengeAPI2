@@ -30,6 +30,10 @@ namespace Business.DependencyResolvers.AutoFac
             builder.RegisterType<EfProblemDal>().As<IProblemDal>().SingleInstance();
             builder.RegisterType<ProblemManager>().As<IProblemService>().SingleInstance();
 
+            //problem inputs
+            builder.RegisterType<EfProblemInputDal>().As<IProblemInputDal>().SingleInstance();
+            builder.RegisterType<ProblemInputManager>().As<IProblemInputService>().SingleInstance();
+
             //user
             builder.RegisterType<EfUserDal>().As<IUserDal>().SingleInstance();
             builder.RegisterType<UserManager>().As<IUserService>().SingleInstance();

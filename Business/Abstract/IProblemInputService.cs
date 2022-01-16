@@ -1,7 +1,6 @@
 ﻿using Core.Business;
 using Core.Utilities.Results;
 using Entities.Concrete;
-using Entities.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,9 +9,8 @@ using System.Threading.Tasks;
 
 namespace Business.Abstract
 {
-    public interface IProblemService : IBaseService<Problem>
+    public interface IProblemInputService : IBaseService<ProblemInput>
     {
-        IResult Add(ProblemDto dto);
-        IDataResult<List<Problem>> GetAllByTrackId(int trackId);
+        IDataResult<ProblemInput> GetByProblemId(int problemId);
     }
 }
