@@ -28,9 +28,21 @@ namespace WebAPI.Controllers
         {
             return this.ResponseResult(_problemService.GetAllByTrackId(trackId));
         }
-        
 
-       [HttpGet("getproblembyid")]
+        [HttpGet("getallbytrackname")]
+        public IActionResult GetAllByTrackName(string trackName)
+        {
+            return this.ResponseResult(_problemService.GetAllByTrackName(trackName));
+        }
+
+        [HttpGet("getallbytracknamewithdetails")]
+        public IActionResult GetAllByTrackNameWithDetails(string trackName)
+        {
+            return this.ResponseResult(_problemService.GetAllByTrackNameWithDetails(trackName));
+        }
+
+
+        [HttpGet("getproblembyid")]
         public IActionResult GetById(int id)
         {
             return this.ResponseResult(_problemService.Get(x=>x.Id==id));
