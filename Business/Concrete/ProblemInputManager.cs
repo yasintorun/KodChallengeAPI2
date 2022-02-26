@@ -20,16 +20,16 @@ namespace Business.Concrete
             _problemInputDal = problemInputDal;
         }
 
-        public IDataResult<ProblemInput> GetByProblemId(int problemId)
+        public IDataResult<List<ProblemInput>> GetByProblemId(int problemId)
         {
             try
             {
                 var problemInputs = _problemInputDal.GetAll(p => p.ProblemId == problemId);
-                return new SuccessDataResult<ProblemInput>(Message.Listed);
+                return new SuccessDataResult<List<ProblemInput>>(problemInputs, Message.Listed);
             }
             catch (Exception ex)
             {
-                return new ErrorDataResult<ProblemInput>(Message.Error + " Mesaj: " + ex.Message);
+                return new ErrorDataResult<List<ProblemInput>>(Message.Error + " Mesaj: " + ex.Message);
             }
         }
     }

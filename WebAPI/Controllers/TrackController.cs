@@ -23,6 +23,12 @@ namespace WebAPI.Controllers
             return this.ResponseResult(_trackService.GetAll());
         }
 
+        [HttpGet("gettrackbyslug")]
+        public IActionResult GetBySlug(string slug)
+        {
+            return this.ResponseResult(_trackService.GetBySlug(slug));
+        }
+
         [HttpPost("addtrack")]
         public IActionResult Add(Track track)
         {

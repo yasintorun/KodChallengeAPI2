@@ -11,6 +11,6 @@ namespace Business.Abstract
 {
     public interface IProblemInputService : IBaseService<ProblemInput>
     {
-        IDataResult<ProblemInput> GetByProblemId(int problemId);
+        IDataResult<List<ProblemInput>> GetByProblemId(int problemId);
     }
 }

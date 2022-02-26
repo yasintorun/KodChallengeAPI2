@@ -14,5 +14,7 @@ namespace Business.Abstract
     {
         IResult Add(ProblemDto dto);
         IDataResult<List<Problem>> GetAllByTrackId(int trackId);
+        IDataResult<List<Problem>> GetAllByTrackName(string trackName);
+        IDataResult<List<ProblemDto>> GetAllByTrackNameWithDetails(string trackName);
     }
 }

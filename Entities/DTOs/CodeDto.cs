@@ -10,5 +10,7 @@ namespace Entities.DTOs
     {
         public string Code { get; set; }
         public string Language { get; set; }
+        public string Function_name { get; set; }
+        public string Params { get; set; } = "";
     }
 }

@@ -10,6 +10,7 @@ namespace Entities.DTOs
     public class ProblemDto
     {
         public Problem Problem{ get; set; }
-        public ProblemInput ProblemInputs { get; set; }
+        public List<ProblemInput> ProblemInputs { get; set; }
+        public Track Track { get; set; }
     }
 }
